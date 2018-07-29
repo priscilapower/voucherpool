@@ -17,15 +17,19 @@ Follow the steps to make your API code usefully.
 
 2- Set your mysql host, user and password on .env file.
 
-3- Run the migrate in your root path to create the tables.
+3- Install the dependecies from composer.
+
+`composer install`
+
+4- Run the migrate in your root path to create the tables.
 
 `php artisan migrate`
 
-4- If you want, run the seeder to create fake data.
+5- If you want, run the seeder to create fake data.
 
 `php artisan db:seed`
 
-5- Now it's just start the server.
+6- Now it's just start the server.
 
 `php -S localhost:8000 -t public`
 

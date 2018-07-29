@@ -27,7 +27,7 @@ $factory->define(App\Recipients::class, function (Faker\Generator $faker) {
 
 $factory->define(App\SpecialOffers::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->title,
+        'name' => $faker->sentence,
         'percentage_discount' => $faker->randomNumber(2),
     ];
 });
@@ -38,7 +38,7 @@ $factory->define(App\VoucherCodes::class, function (Faker\Generator $faker) {
 
     return [
         'code' => str_random(8),
-        'used' => $faker->boolean,
+        'used' => false,
         'expiration_date' => $faker->creditCardExpirationDate,
         'recipient_id' => $faker->randomElement($recipientsIDs),
         'special_offer_id' => $faker->randomElement($specialOfferIDs),
